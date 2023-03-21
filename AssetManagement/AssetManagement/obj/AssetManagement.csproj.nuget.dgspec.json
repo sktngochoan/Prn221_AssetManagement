@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FULearning\\Spring2023\\PRN221\\WEB\\AssetManagement\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj": {}
+    "D:\\FULearning\\Spring2023\\PRN221\\WEB\\Project\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj": {}
   },
   "projects": {
-    "D:\\FULearning\\Spring2023\\PRN221\\WEB\\AssetManagement\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj": {
+    "D:\\FULearning\\Spring2023\\PRN221\\WEB\\Project\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FULearning\\Spring2023\\PRN221\\WEB\\AssetManagement\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj",
+        "projectUniqueName": "D:\\FULearning\\Spring2023\\PRN221\\WEB\\Project\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj",
         "projectName": "AssetManagement",
-        "projectPath": "D:\\FULearning\\Spring2023\\PRN221\\WEB\\AssetManagement\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj",
+        "projectPath": "D:\\FULearning\\Spring2023\\PRN221\\WEB\\Project\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj",
         "packagesPath": "C:\\Users\\NGOCHOAN\\.nuget\\packages\\",
-        "outputPath": "D:\\FULearning\\Spring2023\\PRN221\\WEB\\AssetManagement\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\obj\\",
+        "outputPath": "D:\\FULearning\\Spring2023\\PRN221\\WEB\\Project\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,9 +54,19 @@
               "target": "Package",
               "version": "[6.0.15, )"
             },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
             }
           },
           "imports": [

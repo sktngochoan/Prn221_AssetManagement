@@ -1,5 +1,15 @@
 ﻿@page
 @model IndexModel
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+}
+
+@{
+    TempData.Remove("Message");
+}
 @{
     ViewData["Title"] = "Home page";
 }
