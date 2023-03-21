@@ -1,9 +1,17 @@
+using AssetManagement.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddTransient<StockManagemnetContext>();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(x =>
+{
+    x.IdleTimeout = TimeSpan.FromMinutes(10);
+});
+builder.Services.AddHttpContextAccessor();
 var app = builder.Build();
+app.UseSession();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -21,5 +29,4 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
-
 app.Run();
