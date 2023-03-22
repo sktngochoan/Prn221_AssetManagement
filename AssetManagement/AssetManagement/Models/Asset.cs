@@ -5,6 +5,11 @@ namespace AssetManagement.Models
 {
     public partial class Asset
     {
+        public Asset()
+        {
+            BorrowingAssets = new HashSet<BorrowingAsset>();
+        }
+
         public int Id { get; set; }
         public int? CategoryId { get; set; }
         public string? AssetName { get; set; }
@@ -13,5 +18,6 @@ namespace AssetManagement.Models
         public string? Specification { get; set; }
 
         public virtual Category? Category { get; set; }
+        public virtual ICollection<BorrowingAsset> BorrowingAssets { get; set; }
     }
 }
