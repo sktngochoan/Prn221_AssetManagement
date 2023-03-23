@@ -34,6 +34,7 @@ namespace AssetManagement.Pages
             {
                 error = 0;
                 HttpContext.Session.SetString("username", user.Username);
+                HttpContext.Session.SetString("userlogin", user.Id+"");
                 HttpContext.Session.SetString("role", "admin");
                 return RedirectToPage("Index");
             }
@@ -41,6 +42,7 @@ namespace AssetManagement.Pages
             {
                 error = 0;
                 HttpContext.Session.SetString("username", user.Username);
+                HttpContext.Session.SetString("userlogin", user.Id+"");
                 HttpContext.Session.SetString("role", "user");
                 return RedirectToPage("Index");
             }

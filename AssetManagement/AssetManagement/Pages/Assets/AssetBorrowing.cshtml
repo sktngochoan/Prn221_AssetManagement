@@ -12,20 +12,20 @@
 {
     <h1>You must be logged to see this</h1>
 }else{
-
+    <a href="/Assets/AssetBorrowing">Back to list</a>
     <form method="post">
          <label for="cars">Status:</label>
+         <input type="hidden" name="page" value="1" />
             <select name="stat" onchange="this.form.submit()">
-                <option selected="@(ViewBag.status == null?"selected":null)" value="3">--All Status--</option>
-                
-                    <option selected="@(ViewBag.status == true?"selected":null)" value="1">Đang mượn</option>
-                    <option selected="@(ViewBag.status == false?"selected":null)"  value="0">Đã trả</option>
+                <option selected="@(ViewBag.status == 0?"selected":null)" value="0">--All Status--</option>               
+                    <option selected="@(ViewBag.status == 1?"selected":null)" value="1">Đang mượn</option>
+                    <option selected="@(ViewBag.status == 2?"selected":null)"  value="2">Đã trả</option>
 
             </select>
     </form>
 
 
-<table class="table">
+<table class="table" style="min-height:400px">
     <thead>
         <tr>
             <th>
@@ -39,9 +39,6 @@
             </th>
             <th>
                Status
-            </th>
-            <th>
-                Amount
             </th>
             <th>
                 Hạn phải trả
@@ -81,9 +78,6 @@
                     }
 
             <td>
-                @Html.DisplayFor(modelItem => item.Amount)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.DueDate)
             </td>
             <td>
@@ -99,7 +93,7 @@
         <td>
             <form method="post">
                 <input type="hidden" name="page" value="@(ViewBag.page - 1)" />
-               <input type="hidden" name="stat" value="@ViewBag.status"  />
+                <input type="hidden" name="stat" value="@ViewBag.status"  />
                 @if (ViewBag.page == 1)
                 {
                     <button disabled style="width:60px;color:white;background:#6d7687" type="submit">Previos</button>
@@ -113,8 +107,8 @@
         <td>
         <td>
             <form method="post">
-                <input type="hidden" name="page" value="@(ViewBag.page + 1)" />
-                              <input type="hidden" name="stat" value="@ViewBag.status"  />
+                    <input type="hidden" name="page" value="@(ViewBag.page + 1)" />
+                    <input type="hidden" name="stat" value="@ViewBag.status"  />
 
                     @if (ViewBag.page == ViewBag.totalPage)
                     {
