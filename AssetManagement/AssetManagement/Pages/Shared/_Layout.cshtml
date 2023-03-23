@@ -46,16 +46,16 @@
                         <li class="nav-item">
                             <a style="color:white" class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a style="color:white" class="nav-link" asp-area="" asp-page="/Shopping/Index">Shopping</a>
-                        </li>
-                       
-                        <li class="nav-item">
-                             <a style="color:white" class="nav-link" asp-area="" asp-page="/Shopping/Carts/Index">Cart(0)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a style="color:white" class="nav-link" asp-area="" asp-page="/Albums/Index">Albums</a>
-                        </li>
+                        @if(role == "admin") {
+                            <li class="nav-item">
+                                <a style="color:white" class="nav-link" asp-area="" asp-page="/Admin/AssetManager">Asset management</a>
+                            </li>
+                        }
+                        @if(role == "user") {
+                            <li class="nav-item">
+                                <a style="color:white" class="nav-link" asp-area="" asp-page="/Assets/AssetBorrowing">Asset</a>
+                            </li>
+                        }
                         <li class="nav-item" style="position: absolute;right: 50px;">
                             @if (userName == null)
                             {
