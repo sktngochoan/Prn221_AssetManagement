@@ -36,8 +36,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQXNzZXRzXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/FPTU/Learning/Ki7/PRN221/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Admin/BorrowAsset.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQm9ycm93QXNzZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/FPTU/Learning/Ki7/PRN221/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Admin/DetailAsset.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGV0YWlsQXNzZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/FPTU/Learning/Ki7/PRN221/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Admin/ReturnAsset.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmV0dXJuQXNzZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/FPTU/Learning/Ki7/PRN221/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Admin/Users/Create.cshtml]

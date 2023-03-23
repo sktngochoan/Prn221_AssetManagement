@@ -1,8 +1,8 @@
-using AssetManagement.Models;
+﻿using AssetManagement.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-
+using System.Data.SqlClient;
 namespace AssetManagement.Pages.Admin
 {
     public class AssetManagerModel : PageModel
@@ -13,6 +13,9 @@ namespace AssetManagement.Pages.Admin
         {
             _context = context;
         }
+
+        [BindProperty]
+        public int AssetId { get; set; }
         [BindProperty]
         public FilterAsset Filter { get; set; }
         [BindProperty]
@@ -70,11 +73,11 @@ namespace AssetManagement.Pages.Admin
                 else
                 {
                     listAsset = _context.Assets
-                .Include(a => a.Category)
-                .Where(x => x.Status == status)
-                .Skip((Filter.page - 1) * 3)
-                .Take(3)
-                .ToList();
+.Include(a => a.Category)
+.Where(x => x.Status == status)
+.Skip(Math.Max(0, (Filter.page - 1) * 3))
+.Take(3)
+.ToList();
 
                     allAlbum = _context.Assets
                         .Where(x => x.Status == status)
@@ -120,6 +123,29 @@ namespace AssetManagement.Pages.Admin
             ViewData["user"] = getUserLogged();
         }
 
+        public async Task<IActionResult> OnPostReturnAsync(int assetId)
+        {
+            var asset = await _context.Assets.FirstOrDefaultAsync(a => a.Id == assetId);
+
+            var borrowingAsset = await _context.BorrowingAssets
+                .FirstOrDefaultAsync(a => a.AssetId == assetId && a.Status == true);
+
+            if (borrowingAsset != null)
+            {
+                asset.Status = false;
+
+                _context.Assets.Update(asset);
+
+                borrowingAsset.RetrurnDate = DateTime.Now.Date;
+                borrowingAsset.Status = false;
+
+                _context.BorrowingAssets.Update(borrowingAsset);
+
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToPage("/Admin/AssetManager");
+        }
         User getUserLogged()
         {
             var session = HttpContext.Session;

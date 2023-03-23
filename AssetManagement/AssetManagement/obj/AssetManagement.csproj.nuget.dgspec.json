@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "E:\\FPTU\\Learning\\Ki7\\PRN221\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj": {}
   },
   "projects": {
@@ -12,9 +13,27 @@
         "projectPath": "E:\\FPTU\\Learning\\Ki7\\PRN221\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj",
         "packagesPath": "C:\\Users\\Sown_Laptop\\.nuget\\packages\\",
         "outputPath": "E:\\FPTU\\Learning\\Ki7\\PRN221\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\obj\\",
+=======
+    "S:\\PRN221\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj": {}
+  },
+  "projects": {
+    "S:\\PRN221\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\PRN221\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj",
+        "projectName": "AssetManagement",
+        "projectPath": "S:\\PRN221\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj",
+        "packagesPath": "C:\\Users\\Sown_PC\\.nuget\\packages\\",
+        "outputPath": "S:\\PRN221\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\obj\\",
+>>>>>>> 40d3a29fcce5df439d1e678c51dc5aee1f612461
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Sown_Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Sown_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> 40d3a29fcce5df439d1e678c51dc5aee1f612461
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
