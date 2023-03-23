@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN FINAL\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj": {}
+    "D:\\FULearning\\Spring2023\\PRN221\\WEB\\Project\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj": {}
   },
   "projects": {
-    "D:\\PRN FINAL\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj": {
+    "D:\\FULearning\\Spring2023\\PRN221\\WEB\\Project\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN FINAL\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj",
+        "projectUniqueName": "D:\\FULearning\\Spring2023\\PRN221\\WEB\\Project\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj",
         "projectName": "AssetManagement",
-        "projectPath": "D:\\PRN FINAL\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN FINAL\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\obj\\",
+        "projectPath": "D:\\FULearning\\Spring2023\\PRN221\\WEB\\Project\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\AssetManagement.csproj",
+        "packagesPath": "C:\\Users\\NGOCHOAN\\.nuget\\packages\\",
+        "outputPath": "D:\\FULearning\\Spring2023\\PRN221\\WEB\\Project\\Prn221_AssetManagement\\AssetManagement\\AssetManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NGOCHOAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -83,7 +83,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -95,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

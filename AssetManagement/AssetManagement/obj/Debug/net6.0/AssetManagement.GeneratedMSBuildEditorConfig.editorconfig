@@ -8,57 +8,65 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AssetManagement
 build_property.RootNamespace = AssetManagement
-build_property.ProjectDir = D:\PRN FINAL\Prn221_AssetManagement\AssetManagement\AssetManagement\
+build_property.ProjectDir = D:\FULearning\Spring2023\PRN221\WEB\Project\Prn221_AssetManagement\AssetManagement\AssetManagement\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\PRN FINAL\Prn221_AssetManagement\AssetManagement\AssetManagement
+build_property.MSBuildProjectDirectory = D:\FULearning\Spring2023\PRN221\WEB\Project\Prn221_AssetManagement\AssetManagement\AssetManagement
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Assets/AssetBorrowing.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Admin/AssetManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQXNzZXRNYW5hZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Admin/DetailAsset.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGV0YWlsQXNzZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Assets/AssetBorrowing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNzZXRzXEFzc2V0Qm9ycm93aW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/ChangePassword.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/EditAccount.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/EditAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEFjY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Error.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Index.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Login.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Logout.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Privacy.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/_ViewImports.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/_ViewStart.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN FINAL/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Shared/_Layout.cshtml]
+[D:/FULearning/Spring2023/PRN221/WEB/Project/Prn221_AssetManagement/AssetManagement/AssetManagement/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4uw7pwgd7v

@@ -600,3 +600,10 @@ D:\PRN FINAL\Prn221_AssetManagement\AssetManagement\AssetManagement\bin\Debug\ne
 D:\PRN FINAL\Prn221_AssetManagement\AssetManagement\AssetManagement\obj\Debug\net6.0\AssetManagement.MvcApplicationPartsAssemblyInfo.cs
 D:\PRN FINAL\Prn221_AssetManagement\AssetManagement\AssetManagement\bin\Debug\net6.0\PagedList.dll
 D:\PRN FINAL\Prn221_AssetManagement\AssetManagement\AssetManagement\bin\Debug\net6.0\PagedList.Mvc.dll
+D:\FULearning\Spring2023\PRN221\WEB\Project\Prn221_AssetManagement\AssetManagement\AssetManagement\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\FULearning\Spring2023\PRN221\WEB\Project\Prn221_AssetManagement\AssetManagement\AssetManagement\bin\Debug\net6.0\PagedList.dll
+D:\FULearning\Spring2023\PRN221\WEB\Project\Prn221_AssetManagement\AssetManagement\AssetManagement\bin\Debug\net6.0\PagedList.Mvc.dll
+D:\FULearning\Spring2023\PRN221\WEB\Project\Prn221_AssetManagement\AssetManagement\AssetManagement\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\FULearning\Spring2023\PRN221\WEB\Project\Prn221_AssetManagement\AssetManagement\AssetManagement\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\FULearning\Spring2023\PRN221\WEB\Project\Prn221_AssetManagement\AssetManagement\AssetManagement\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\FULearning\Spring2023\PRN221\WEB\Project\Prn221_AssetManagement\AssetManagement\AssetManagement\obj\Debug\net6.0\AssetManagement.MvcApplicationPartsAssemblyInfo.cs
