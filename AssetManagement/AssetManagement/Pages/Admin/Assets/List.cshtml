@@ -1,0 +1,108 @@
+﻿@page
+@model AssetManagement.Pages.Admin.Assets.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of assets</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <input type="hidden" asp-for="@Model.Filter.page" value="1" />
+    <thead>
+        <tr>    
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].AssetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].Specification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Asset) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetName)
+            </td>
+           
+                    @if (item.Status == true)
+                    {
+                    <td>
+                        Đang mượn
+                    </td>
+                    }
+                    else
+                    {
+                    <td>
+                        Sẵn sàng
+                    </td>
+                    }
+           
+            <td>
+                    <img src="/images/@item.Image" width="100px" height="100px" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+
+}
+    </tbody>
+</table>
+@*<table style="margin-top:100px">
+    <tr>
+        <td>
+            <form method="post">
+                <input type="hidden" asp-for="@Model.Filter.page" value="@(Model.Filter.page - 1)" />
+                <input type="hidden" asp-for="@Model.Filter.status" value="@Model.Filter.status" />
+                <input type="hidden" asp-for="@Model.Filter.keyWord" value="@Model.Filter.keyWord" />
+                @if (Model.Filter.page == 1)
+                {
+                    <button disabled style="width:60px;color:white;background:#6d7687" type="submit">Previos</button>
+                }
+                else
+                {
+                    <button style="width:60px;color:white;background:#015bff" type="submit">Previos</button>
+                }
+            </form>
+        </td>
+        <td>
+        <td>
+            <form method="post">
+                <input type="hidden" asp-for="@Model.Filter.page" value="@(Model.Filter.page + 1)" />
+                <input type="hidden" asp-for="@Model.Filter.status" value="@Model.Filter.status" />
+                <input type="hidden" asp-for="@Model.Filter.keyWord" value="@Model.Filter.keyWord" />
+                    @if (Model.Filter.page == ViewBag.totalPage)
+                    {
+                    <button disabled style="width:60px;color:white;background:#6d7687" type="submit">Next</button>
+                    }
+                    else
+                    {
+                    <button style="width:60px;color:white;background:#015bff" type="submit">Next</button>
+                    }
+            </form>
+        </td>
+        <td><div>Page:@Model.Filter.page/@ViewBag.totalPage</div></td>
+    </tr>
+</table>*@
