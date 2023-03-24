@@ -2,21 +2,29 @@
 @model AssetManagement.Pages.Admin.DetailAssetModel
 @{
 }
-<h1>Asset Detail</h1>
+
+<h1 style="font-weight: bold">Asset Detail</h1>
 <table>
     <tr>
-        <td>Asset name: </td>
+        <td><h4>Asset name: </h4></td>
         <td>@Model.asset.AssetName</td>
     </tr>
     <tr>
-        <td>Category: </td>
+        <td><h4>Category: </h4></td>
         <td>@Model.asset.Category.CategoryName </td>
     </tr>
     <tr>
-        <td>Status: </td>
-        <td>@Model.asset.Status </td>
+        <td><h4>Status: </h4></td>
+        @if(Model.asset.Status == true)
+        {
+            <td style="color: green; font-weight: bold;">Sẵn sàng</td>
+        }
+        else
+        {
+            <td style="color: red; font-weight: bold;">Đang mượn</td>
+        }
     <tr>
-        <td><span>Specification:</span> </td>
+        <td><h4><span>Specification: </span></h4> </td>
         <td>@Model.asset.Specification</td>
     </tr>
 </table>
@@ -42,6 +50,9 @@
             <th>
                 Ngày trả
             </th>
+            <th>
+                Người mượn
+            </th>
 
 
 
@@ -59,7 +70,12 @@
                     @Html.DisplayFor(modelItem => item.Asset.Category.CategoryName)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.BorrowDate)
+                    @{
+                        string date = item.BorrowDate?.ToShortDateString();
+                        string duedate = item.DueDate?.ToShortDateString();
+                        string returnDate = item.RetrurnDate?.ToShortDateString();
+                    }
+                    @Html.DisplayFor(modelItem => date)
                 </td>
 
                 @if (item.Status == true)
@@ -75,11 +91,16 @@
                     </td>
                 }
                 <td>
-                    @Html.DisplayFor(modelItem => item.DueDate)
+                    @Html.DisplayFor(modelItem => duedate)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.RetrurnDate)
+                    @Html.DisplayFor(modelItem => returnDate)
+                   
                 </td>
+                <td>
+                     @(item.Borrower.FirstName +" "+ item.Borrower.LastName)
+                </td>
+               
 
             </tr>
         }

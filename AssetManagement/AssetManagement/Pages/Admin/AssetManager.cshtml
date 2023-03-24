@@ -15,7 +15,7 @@
             <form style="display:inline-block" method="post">
                 <input type="hidden" asp-for="@Model.Filter.page" value="1" />
                 <label for="cars">Trạng thái:</label>
-                <select asp-for="@Model.Filter.status">
+                <select asp-for="@Model.Filter.status" onchange="this.form.submit()">
                     <option value="3">--All Status--</option>
                     <option value="0">Sẵn sàng</option>
                     <option value="1">Đang mượn</option>
@@ -25,6 +25,7 @@
                     <button type="submit" style="margin-left:30px;color:white;background:#015bff;">Search</button>
                 </span>
             </form>
+            <br>
             <a asp-area="" asp-page="/Admin/AssetManager">Back to full list</a>
         </span>
     </div>
@@ -57,13 +58,13 @@
                 @Html.DisplayFor(modelItem => item.Category.CategoryName)
             </td>
                 @if(item.Status == true){
-                        <td>
+                        <td style="color: red; font-weight: bold;">
                             Đang mượn
                         </td>
                     }
                     else
                     {
-                         <td>
+                         <td style="color: green; font-weight: bold;">
                             Sẵn sàng
                         </td>
                     }

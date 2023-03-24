@@ -17,7 +17,8 @@ namespace AssetManagement.Pages.Assets
         {
             _context = context;
         }
-
+        [BindProperty]
+        public List<IFormFile> file { get; set; }
         public IActionResult OnGet()
         {
             ViewData["CategoryName"] = new SelectList(_context.Categories, "CategoryName", "CategoryName");
@@ -26,18 +27,35 @@ namespace AssetManagement.Pages.Assets
 
         [BindProperty]
         public Asset Asset { get; set; } = default!;
-        
+
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Assets == null || Asset == null)
+            if (!ModelState.IsValid || _context.Assets == null || Asset == null)
             {
                 return Page();
             }
+            for (int i = 0; i < file.Count; i++)
+            {
+                if (file != null && file[i].Length > 0)
+                {
+                    Asset.Image = file[0].FileName;
+                    var fileName = Path.GetFileName(file[i].FileName);
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", fileName);
 
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await file[i].CopyToAsync(stream);
+                    }
+                }
+            }
+
+            var imageDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images");
+            List<String> listFileName = Directory.GetFiles(imageDirectory).Select(Path.GetFileName).ToList();
+            ViewData["listFile"] = listFileName;
+            Asset.Status = false;
             _context.Assets.Add(Asset);
             await _context.SaveChangesAsync();
-
             return RedirectToPage("./List");
         }
     }

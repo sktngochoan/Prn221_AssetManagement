@@ -29,6 +29,8 @@ namespace AssetManagement.Pages.Admin
                 .Include(b => b.Asset.Category)
                 .Where(x => x.AssetId == id)
                 .ToList();
+
+            
         }
     }
 }

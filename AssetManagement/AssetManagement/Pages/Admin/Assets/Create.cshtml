@@ -11,7 +11,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Asset.Category.CategoryName" class="control-label"></label>
@@ -23,8 +23,8 @@
                 <span asp-validation-for="Asset.AssetName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Asset.Image" class="control-label"></label>
-                <input asp-for="Asset.Image" class="form-control" />
+                <label asp-for="Asset.Image" class="control-label"></label><br />
+                <input asp-for="@Model.file" type="file" multiple /><br />
                 <span asp-validation-for="Asset.Image" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -40,9 +40,10 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="./List">Back to List</a>
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+

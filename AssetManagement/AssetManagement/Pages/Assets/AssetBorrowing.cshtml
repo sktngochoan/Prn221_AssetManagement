@@ -68,26 +68,31 @@
                 @Html.DisplayFor(modelItem => item.Asset.Category.CategoryName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.BorrowDate)
+                @{
+                        string date = item.BorrowDate?.ToShortDateString();
+                        string duedate = item.DueDate?.ToShortDateString();
+                        string returnDate = item.RetrurnDate?.ToShortDateString();
+                    }
+                @Html.DisplayFor(modelItem => date)
             </td>
             
                 @if(item.Status == true){
-                        <td>
+                        <td style="color: green; font-weight: bold;">
                             Đang mượn
                         </td>
                     }
                     else
                     {
-                         <td>
+                         <td style="color: red; font-weight: bold;">
                             Đã trả
                         </td>
                     }
 
             <td>
-                @Html.DisplayFor(modelItem => item.DueDate)
+                @Html.DisplayFor(modelItem => duedate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RetrurnDate)
+                @Html.DisplayFor(modelItem => returnDate)
             </td>
                                        
         </tr>

@@ -10,6 +10,19 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<br />
+ <form method="post">
+         <label for="cars">Status:</label>
+         <input type="hidden" name="page" value="1" />
+            <select name="stat" onchange="this.form.submit()">
+                <option selected="@(ViewBag.status == 0?"selected":null)" value="0">--All Status--</option>               
+                    <option selected="@(ViewBag.status == 1?"selected":null)" value="1">Đang mượn</option>
+                    <option selected="@(ViewBag.status == 2?"selected":null)"  value="2">Sẵn Sàng</option>
+
+            </select>
+    </form>
+
+    <br />
 <table class="table">
     <input type="hidden" asp-for="@Model.Filter.page" value="1" />
     <thead>
@@ -41,13 +54,13 @@
            
                     @if (item.Status == true)
                     {
-                    <td>
+                    <td style="color: red; font-weight: bold;">
                         Đang mượn
                     </td>
                     }
                     else
                     {
-                    <td>
+                    <td style="color: green; font-weight: bold;">
                         Sẵn sàng
                     </td>
                     }
@@ -70,14 +83,13 @@
 }
     </tbody>
 </table>
-@*<table style="margin-top:100px">
+<table style="margin-top:100px">
     <tr>
         <td>
             <form method="post">
-                <input type="hidden" asp-for="@Model.Filter.page" value="@(Model.Filter.page - 1)" />
-                <input type="hidden" asp-for="@Model.Filter.status" value="@Model.Filter.status" />
-                <input type="hidden" asp-for="@Model.Filter.keyWord" value="@Model.Filter.keyWord" />
-                @if (Model.Filter.page == 1)
+                <input type="hidden" name="page" value="@(ViewBag.page - 1)" />
+                <input type="hidden" name="stat" value="@ViewBag.status"  />
+                @if (ViewBag.page == 1)
                 {
                     <button disabled style="width:60px;color:white;background:#6d7687" type="submit">Previos</button>
                 }
@@ -90,10 +102,10 @@
         <td>
         <td>
             <form method="post">
-                <input type="hidden" asp-for="@Model.Filter.page" value="@(Model.Filter.page + 1)" />
-                <input type="hidden" asp-for="@Model.Filter.status" value="@Model.Filter.status" />
-                <input type="hidden" asp-for="@Model.Filter.keyWord" value="@Model.Filter.keyWord" />
-                    @if (Model.Filter.page == ViewBag.totalPage)
+                    <input type="hidden" name="page" value="@(ViewBag.page + 1)" />
+                    <input type="hidden" name="stat" value="@ViewBag.status"  />
+
+                    @if (ViewBag.page >= ViewBag.totalPage)
                     {
                     <button disabled style="width:60px;color:white;background:#6d7687" type="submit">Next</button>
                     }
@@ -103,6 +115,6 @@
                     }
             </form>
         </td>
-        <td><div>Page:@Model.Filter.page/@ViewBag.totalPage</div></td>
+        <td><div>Page:@ViewBag.page/@ViewBag.totalPage</div></td>
     </tr>
-</table>*@
+</table>
