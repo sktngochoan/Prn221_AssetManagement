@@ -25,10 +25,10 @@ namespace AssetManagement.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var conf = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(conf.GetConnectionString("MusicStore"));
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("server=LOCALHOST;database=StockManagemnet;Integrated security=true");
             }
         }
 
@@ -68,7 +68,7 @@ namespace AssetManagement.Models
                 entity.HasOne(d => d.Borrower)
                     .WithMany(p => p.BorrowingAssets)
                     .HasForeignKey(d => d.BorrowerId)
-                    .HasConstraintName("FK__Borrowing__Borro__2D27B809");
+                    .HasConstraintName("FK__Borrowing__Borro__403A8C7D");
             });
 
             modelBuilder.Entity<Category>(entity =>
@@ -94,7 +94,7 @@ namespace AssetManagement.Models
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.Users)
                     .HasForeignKey(d => d.RoleId)
-                    .HasConstraintName("FK__Users__RoleId__2E1BDC42");
+                    .HasConstraintName("FK__Users__RoleId__412EB0B6");
             });
 
             OnModelCreatingPartial(modelBuilder);
