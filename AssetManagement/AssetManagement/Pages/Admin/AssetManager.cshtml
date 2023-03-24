@@ -3,6 +3,13 @@
 @{
     ViewData["Title"] = "AssetBorrowing";
 }
+<script type="text/javascript">
+            function doDelete(id,name) {
+                if (confirm("Bạn xác nhận trả sách " + name + " chứ ?")) {
+                    $("#form").submit();
+                }
+            }
+        </script>
 
 <h1>Asset Management</h1>
 
@@ -71,8 +78,8 @@
                     @if (item.Status == true)
                     {
                         <td>
-                            <form method="post">
-                                <button type="submit" class="btn btn-primary" asp-page-handler="Return" asp-route-assetId="@item.Id">Trả đồ</button>
+                            <form  id="form" method="post">
+                                <button  onclick="doDelete('@item.Id','@item.AssetName')" type="submit" class="btn btn-primary" asp-page-handler="Return" asp-route-assetId="@item.Id">Trả đồ</button>
                             </form>
                         </td>
                     }
