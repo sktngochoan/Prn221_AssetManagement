@@ -86,7 +86,11 @@
                     else
                     {
                         <td>
-                            <a asp-page="BorrowAsset" asp-route-assetId="@item.Id">Cho mượn</a>
+                            <a asp-page="BorrowAsset" asp-route-assetId="@item.Id">
+                                
+                                                            <button class="btn btn-success">Cho mượn</button>
+
+                                </a>
                         </td>
                     }
         </tr>
