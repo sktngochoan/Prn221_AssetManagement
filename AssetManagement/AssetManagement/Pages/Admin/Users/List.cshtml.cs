@@ -17,7 +17,8 @@ namespace AssetManagement.Pages.Admin.Users
         {
             _context = context;
         }
-
+        private static String USER = "userlogin";
+        private static String ROLEJSON = "role";
         public IList<User> User { get;set; } = default!;
 
         public async Task OnGetAsync()
@@ -26,6 +27,26 @@ namespace AssetManagement.Pages.Admin.Users
             {
                 User = await _context.Users
                 .Include(u => u.Role).ToListAsync();
+                if(getUserLogged() != null)
+                {
+                    ViewData["admin"] = getUserLogged();
+
+                }
+            }
+        }
+        User getUserLogged()
+        {
+            var session = HttpContext.Session;
+            string jsoncart = session.GetString(USER);
+            string role = session.GetString(ROLEJSON);
+            User user = _context.Users.Where(u => u.Id == int.Parse(jsoncart)).FirstOrDefault();
+            if (user != null && role.Equals("admin"))
+            {
+                return user;
+            }
+            else
+            {
+                return null;
             }
         }
     }

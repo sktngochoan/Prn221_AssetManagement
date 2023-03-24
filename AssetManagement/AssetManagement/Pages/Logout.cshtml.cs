@@ -8,6 +8,9 @@ namespace AssetManagement.Pages
         public IActionResult OnGet()
         {
             HttpContext.Session.Remove("username");
+            HttpContext.Session.Remove("role");
+            HttpContext.Session.Remove("userLogin");
+
             return RedirectToPage("Index");
         }
     }

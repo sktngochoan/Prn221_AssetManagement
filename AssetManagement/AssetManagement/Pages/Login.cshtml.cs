@@ -2,6 +2,7 @@ using AssetManagement.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Principal;
 
 namespace AssetManagement.Pages
@@ -27,10 +28,12 @@ namespace AssetManagement.Pages
         public IActionResult OnPost()
         {
             User user = _context.Users
+                .Include(b => b.Role)
                 .Where(x => x.Username.Equals(account.username))
                 .Where(x => x.Password.Equals(account.password))
+                .Where(x => x.Status == true)
                 .FirstOrDefault();
-            if (user != null && user.RoleId == 1)
+            if (user != null && (user.RoleId == 1 || user.Role.RoleName.Equals("Admin")))
             {
                 error = 0;
                 HttpContext.Session.SetString("username", user.Username);
@@ -38,7 +41,7 @@ namespace AssetManagement.Pages
                 HttpContext.Session.SetString("role", "admin");
                 return RedirectToPage("Index");
             }
-            else if (user != null && user.RoleId == 2)
+            else if (user != null && (user.RoleId == 2 || user.Role.RoleName.Equals("User")))
             {
                 error = 0;
                 HttpContext.Session.SetString("username", user.Username);

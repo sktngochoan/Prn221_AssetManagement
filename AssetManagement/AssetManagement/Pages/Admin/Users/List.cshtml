@@ -7,6 +7,14 @@
 
 <h1>Index</h1>
 
+@if(ViewBag.admin == null)
+{
+    <h1>You need login to see this</h1>
+}
+else
+{
+    
+
 <p>
     <a asp-page="Create">Create New</a>
 </p>
@@ -93,3 +101,5 @@
 }
     </tbody>
 </table>
+
+}
